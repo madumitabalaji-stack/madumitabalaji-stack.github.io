@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Madumita Mira Balaji</title>
+<meta name="description" content="Lawyer working on financial regulation, digital assets and AI governance in Washington, DC. Georgetown LL.M., founder of the State Stablecoin Atlas.">
+<meta name="author" content="Madumita Mira Balaji">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Madumita Mira Balaji | Financial regulation, traced to the statute">
+<meta property="og:description" content="Georgetown LL.M. in International Business and Economic Law. Founder of the State Stablecoin Atlas.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='5' y='5' width='22' height='22' rx='5' fill='%231f5564'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Public+Sans:wght@300..700&display=swap">
+<style>
+  /* Layout: a wide editorial page. Hero = name and story left, the Atlas as a 51-square map right.
+     Sections use a narrow margin column for where/when and a main column for what. */
+  :root {
+    --paper: #F6F5F1;
+    --surface: #FFFFFF;
+    --ink: #1C1C1A;
+    --ink-2: #3D3F3B;
+    --muted: #64655D;
+    --line: #E2E0D8;
+    --line-strong: #B9B8AE;
+    --accent: #1F5564;
+    --accent-hover: #17434F;
+    --on-accent: #FFFFFF;
+    --tint: #E5EDEF;
+    --select: #C9DCE1;
+    --st-live: #1F5564;
+    --st-guidance: #6FA3B0;
+    --st-pending: #C98A2B;
+    --st-excluded: #DAD8CF;
+    --st-text-dark: #FFFFFF;
+    --st-text-light: #3D3F3B;
+
+    --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --sans: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --wrap: 74rem;
+    --pad: clamp(1rem, 5vw, 3rem);
+    --margin-col: 13rem;
+    --col-gap: clamp(1.5rem, 4vw, 3.5rem);
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #121513; --surface: #191D1B; --ink: #ECEBE3; --ink-2: #C9CCC4; --muted: #9DA29A;
+      --line: #2A2F2C; --line-strong: #474D49; --accent: #86C0CE; --accent-hover: #A3D2DD; --on-accent: #0F1514;
+      --tint: #16262A; --select: #2C4A52;
+      --st-live: #5FA4B5; --st-guidance: #2F5F6B; --st-pending: #D9A04A; --st-excluded: #2E3330;
+      --st-text-dark: #0F1514; --st-text-light: #C9CCC4;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #121513; --surface: #191D1B; --ink: #ECEBE3; --ink-2: #C9CCC4; --muted: #9DA29A;
+    --line: #2A2F2C; --line-strong: #474D49; --accent: #86C0CE; --accent-hover: #A3D2DD; --on-accent: #0F1514;
+    --tint: #16262A; --select: #2C4A52;
+    --st-live: #5FA4B5; --st-guidance: #2F5F6B; --st-pending: #D9A04A; --st-excluded: #2E3330;
+    --st-text-dark: #0F1514; --st-text-light: #C9CCC4;
+    color-scheme: dark;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 4.75rem); -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: var(--sans); font-size: 1.0625rem; line-height: 1.6;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: .22em; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 2.5px solid var(--accent); outline-offset: 3px; }
+  ::selection { background: var(--select); color: var(--ink); }
+  .visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  .skip { position: absolute; left: 1rem; top: -4rem; z-index: 40; padding: .5rem .875rem; border-radius: 6px; background: var(--accent); color: var(--on-accent); text-decoration: none; font-weight: 600; }
+  .skip:focus { top: calc(env(safe-area-inset-top, 0px) + .75rem); }
+  .wrap { width: 100%; max-width: var(--wrap); margin-inline: auto; padding-inline: var(--pad); }
+
+  /* Navigation */
+  .nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--paper); border-bottom: 1px solid var(--line); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 4rem; }
+  .wordmark { display: inline-flex; align-items: center; gap: .625rem; font-family: var(--serif); font-size: 1.1875rem; font-weight: 500; color: var(--ink); text-decoration: none; }
+  .wordmark::before { content: ""; flex: none; width: .625rem; height: .625rem; border-radius: 2px; background: var(--accent); }
+  .nav ul { display: flex; align-items: center; gap: clamp(1rem, 2.5vw, 2rem); margin: 0; padding: 0; list-style: none; }
+  .nav li a:not(.btn) { color: var(--ink-2); font-size: .9375rem; text-decoration: none; }
+  .nav li a:not(.btn):hover { color: var(--ink); text-decoration: underline; }
+  @media (max-width: 820px) { .nav li:not(:last-child) { display: none; } }
+
+  /* Buttons */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 2.875rem; padding: .625rem 1.125rem; border: 1.5px solid transparent; border-radius: 999px; font: 600 .9375rem/1.2 var(--sans); text-decoration: none; cursor: pointer; }
+  .btn-primary { background: var(--accent); color: var(--on-accent); }
+  .btn-primary:hover { background: var(--accent-hover); }
+  .btn-quiet { background: transparent; color: var(--ink); border-color: var(--line-strong); }
+  .btn-quiet:hover { border-color: var(--ink); }
+  .btn-small { min-height: 2.375rem; padding: .4375rem 1rem; font-size: .875rem; }
+  .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+  /* Hero */
+  .hero { padding-block: clamp(2.5rem, 6vw, 5rem) clamp(3.5rem, 7vw, 5.5rem); }
+  .hero-grid {
+    display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    grid-template-areas: "head photo" "body photo" "body facts";
+    column-gap: clamp(2rem, 6vw, 5.5rem); align-items: start;
+  }
+  .hero-head { grid-area: head; }
+  .hero-body { grid-area: body; margin-top: 2rem; }
+  .hero-name { margin: 0; font-family: var(--serif); font-weight: 460; font-size: clamp(3rem, 7.5vw, 6.25rem); line-height: .92; letter-spacing: -.028em; }
+  .hero-name > span { display: block; }
+  .hero-line { margin: 1.25rem 0 0; max-width: 18em; font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(1.375rem, 2.3vw, 1.875rem); line-height: 1.25; color: var(--ink-2); text-wrap: balance; }
+  .hero-intro { margin: 0 0 1.75rem; max-width: 36em; font-size: 1.1875rem; line-height: 1.6; }
+
+  .portrait { grid-area: photo; justify-self: end; width: min(100%, 24rem); margin: 0; }
+  .portrait img { display: block; width: 100%; height: auto; border-radius: 22px; }
+
+  /* The Atlas, drawn as 51 squares */
+  .atlas { margin: 1.75rem 0 1.5rem; padding: clamp(1rem, 2.5vw, 1.5rem); background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
+  .atlas-head { display: flex; justify-content: space-between; align-items: baseline; gap: .75rem; margin-bottom: .875rem; }
+  .atlas-head b { font-family: var(--serif); font-weight: 500; font-size: 1.125rem; }
+  .atlas-head span { color: var(--muted); font-size: .8125rem; font-variant-numeric: tabular-nums; }
+  .tiles { display: grid; grid-template-columns: repeat(17, minmax(0, 1fr)); gap: 4px; }
+  @media (max-width: 620px) { .tiles { grid-template-columns: repeat(9, minmax(0, 1fr)); } }
+  .tile {
+    aspect-ratio: 1; max-width: 100%; display: grid; place-items: center; border-radius: 4px;
+    font: 600 clamp(.5625rem, 1.6vw, .6875rem)/1 var(--sans); letter-spacing: .02em; font-variant-numeric: tabular-nums;
+    cursor: default; transition: transform .15s ease;
+  }
+  .tile:hover { transform: scale(1.12); }
+  .tile.live { background: var(--st-live); color: var(--st-text-dark); }
+  .tile.guidance { background: var(--st-guidance); color: var(--st-text-dark); }
+  .tile.pending { background: var(--st-pending); color: var(--st-text-dark); }
+  .tile.excluded { background: var(--st-excluded); color: var(--st-text-light); }
+  @media (prefers-reduced-motion: reduce) { .tile { transition: none; } .tile:hover { transform: none; } }
+  .atlas figcaption { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: .375rem 1rem; margin-top: 1rem; color: var(--ink-2); font-size: .8125rem; line-height: 1.4; }
+  .key { display: inline-flex; align-items: center; gap: .5rem; font-variant-numeric: tabular-nums; }
+  .swatch { flex: none; width: .75rem; height: .75rem; border-radius: 2px; }
+  .sw-live { background: var(--st-live); } .sw-guidance { background: var(--st-guidance); }
+  .sw-pending { background: var(--st-pending); } .sw-excluded { background: var(--st-excluded); box-shadow: inset 0 0 0 1px var(--line-strong); }
+  .atlas .atlas-link { grid-column: 1 / -1; margin-top: .375rem; color: var(--muted); }
+
+  .facts { grid-area: facts; justify-self: end; width: min(100%, 24rem); margin: 1.5rem 0 0; }
+  .facts div { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: .75rem; padding: .75rem 0; border-top: 1px solid var(--line); }
+  .facts div:last-child { border-bottom: 1px solid var(--line); }
+  .facts dt { color: var(--muted); font-size: .875rem; line-height: 1.55; }
+  .facts dd { margin: 0; font-size: .9375rem; line-height: 1.5; }
+  @media (max-width: 860px) {
+    .hero-grid { grid-template-columns: 1fr; grid-template-areas: "head" "photo" "body" "facts"; }
+    .portrait { justify-self: start; width: min(100%, 20rem); margin-top: 2rem; }
+    .facts { justify-self: stretch; width: 100%; margin-top: 2rem; }
+  }
+  @media (max-width: 400px) { .facts div { grid-template-columns: 1fr; gap: .125rem; } }
+
+  /* Sections */
+  .sec { padding-block: clamp(3.5rem, 7vw, 5.5rem); border-top: 1px solid var(--line); }
+  .sec-title { margin: 0 0 clamp(2rem, 4vw, 3rem); font-family: var(--serif); font-weight: 460; font-size: clamp(1.875rem, 3.2vw, 2.5rem); line-height: 1.1; letter-spacing: -.015em; }
+  .row { display: grid; grid-template-columns: var(--margin-col) minmax(0, 1fr); column-gap: var(--col-gap); }
+  .about-case { grid-template-columns: var(--margin-col) minmax(0, 1fr) minmax(0, 20rem); }
+  .shots { display: flex; flex-direction: column; gap: 1.75rem; min-width: 0; }
+  .shot { margin: 0; }
+  .shot img { display: block; width: 100%; height: auto; border-radius: 18px; }
+  .shot figcaption { margin-top: .625rem; color: var(--muted); font-size: .8125rem; line-height: 1.45; }
+  @media (max-width: 1100px) {
+    .about-case { grid-template-columns: var(--margin-col) minmax(0, 1fr); }
+    .about-case .shots { grid-column: 2; max-width: 22rem; margin-top: 2rem; }
+  }
+  .item + .item { margin-top: clamp(2.75rem, 5vw, 4rem); }
+  .row.tight + .row.tight { margin-top: 1.75rem; }
+  .meta { padding-top: .3rem; color: var(--muted); font-size: .875rem; line-height: 1.5; font-variant-numeric: tabular-nums; }
+  .meta b { display: block; color: var(--ink-2); font-weight: 600; }
+  .meta span { display: block; }
+  .body { max-width: 42rem; min-width: 0; }
+  .body p { margin: 0 0 1rem; }
+  .body > :last-child { margin-bottom: 0; }
+  .prose p { font-size: 1.125rem; line-height: 1.65; }
+  .body .hook { margin-bottom: 1.25rem; font-family: var(--serif); font-style: italic; font-size: clamp(1.375rem, 2.2vw, 1.625rem); line-height: 1.3; color: var(--ink-2); }
+  .item-title { margin: 0 0 .75rem; font-family: var(--serif); font-weight: 500; font-size: clamp(1.375rem, 2.1vw, 1.625rem); line-height: 1.22; letter-spacing: -.01em; text-wrap: balance; }
+  .small-title { margin: 0 0 .125rem; font-size: 1.0625rem; font-weight: 600; line-height: 1.4; }
+  .body .org { margin: 0 0 .5rem; color: var(--ink-2); font-size: .9375rem; }
+  .runin { color: var(--ink-2); font-size: .9375rem; }
+  .runin b { color: var(--ink); font-weight: 600; }
+  .modules { margin: .5rem 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: .375rem; }
+  .modules li { padding: .25rem .625rem; border: 1px solid var(--line); border-radius: 999px; color: var(--ink-2); font-size: .8125rem; background: var(--surface); }
+  @media (max-width: 760px) {
+    .row, .about-case { grid-template-columns: 1fr; row-gap: .375rem; }
+    .about-case .shots { grid-column: 1; max-width: 20rem; margin-top: 1.5rem; }
+    .meta { padding-top: 0; }
+  }
+
+  /* Writing */
+  .post-title { margin: 0 0 .25rem; font-family: var(--serif); font-weight: 500; font-style: italic; font-size: 1.3125rem; line-height: 1.3; }
+  .body .post-desc { margin: 0; color: var(--ink-2); font-size: 1rem; }
+
+  /* Contact */
+  .sec-contact { background: var(--tint); border-top: none; }
+  .contact-grid { display: grid; grid-template-columns: minmax(0, 18rem) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+  .contact-photo { margin: 0; }
+  .contact-photo img { display: block; width: 100%; height: auto; border-radius: 18px; }
+  .contact-photo figcaption { margin-top: .625rem; color: var(--muted); font-size: .8125rem; }
+  .contact-body { max-width: 44rem; min-width: 0; }
+  @media (max-width: 760px) { .contact-grid { grid-template-columns: 1fr; } .contact-photo { max-width: 16rem; } }
+  .contact-body .sec-title { margin-bottom: 1.25rem; }
+  .lead { margin: 0 0 .5rem; font-size: 1.125rem; line-height: 1.65; }
+  .contact-email { display: inline-block; margin: .25rem 0 1.5rem; font-family: var(--serif); font-weight: 460; font-size: clamp(1.5rem, 4.2vw, 2.5rem); line-height: 1.15; letter-spacing: -.01em; color: var(--ink); text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: .18em; overflow-wrap: anywhere; }
+  .contact-email:hover { text-decoration-thickness: 3px; }
+  .based { margin: 1.5rem 0 0; color: var(--muted); font-size: .9375rem; }
+
+  .foot { padding-block: 2rem 2.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .875rem; }
+  .foot .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1.5rem; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="wordmark" href="#top">Madumita Balaji</a>
+    <nav aria-label="Page sections">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#writing">Writing</a></li>
+        <li><a class="btn btn-primary btn-small" href="#contact">Get in touch</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top" aria-labelledby="name">
+    <div class="wrap hero-grid">
+      <div class="hero-head">
+        <h1 class="hero-name" id="name"><span>Madumita</span> <span>Mira Balaji</span></h1>
+        <p class="hero-line">Financial regulation, traced back to the statute.</p>
+      </div>
+      <div class="hero-body">
+        <p class="hero-intro">I’m a lawyer working on financial regulation, digital assets and AI governance, based in Washington, DC. I hold an LL.M. in International Business and Economic Law from Georgetown, with a Certificate in Securities and Financial Law, and a business and law degree from Tamil Nadu National Law University. I built and maintain the State Stablecoin Atlas, which maps how every state and DC regulates stablecoins and digital assets, checked against the statutes themselves.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="mailto:mb3073@georgetown.edu">Email me</a>
+          <a class="btn btn-quiet" href="https://statestablecoinatlas.com" target="_blank" rel="noopener noreferrer">See the Atlas<span class="visually-hidden"> (opens in a new tab)</span></a>
+          <a class="btn btn-quiet" href="https://linkedin.com/in/madumitabalaji" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>
+        </div>
+      </div>
+      <figure class="portrait">
+        <img src="images/fintech-week.jpg" width="765" height="900" alt="Madumita smiling in a black blazer and conference lanyard beside the DC Fintech Week 2025 sign.">
+      </figure>
+      <dl class="facts">
+        <div><dt>Background</dt><dd>Law in India and the US, with a business degree built in</dd></div>
+        <div><dt>Focus</dt><dd>Financial regulation, digital assets and AI governance</dd></div>
+        <div><dt>Based in</dt><dd>Washington, DC</dd></div>
+        <div><dt>Looking for</dt><dd>Roles in regulatory change, compliance and policy</dd></div>
+        <div><dt>Languages</dt><dd>English and Tamil</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="sec" id="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <h2 class="sec-title" id="about-title">About</h2>
+      <div class="row about-case">
+        <div class="meta" aria-hidden="true"></div>
+        <div class="body prose">
+          <p class="hook">A CV can’t tell the whole story, so here’s the short version.</p>
+          <p>I trained as a lawyer in India, in an integrated business and law degree. My internships took me through trade and customs disputes, insolvency, merger review, and white-collar investigations, where I drafted an anti-bribery and anti-money-laundering policy for an AI company. Each one taught me the same thing: the interesting work is in how rules are written, and in what they ask of the businesses that have to live with them.</p>
+          <p>That brought me to Georgetown for my LL.M., and to digital assets. At Bluprynt, I worked on compliance for a digital-asset company: policies and procedures, KYC and customer due diligence, and Travel Rule questions across several countries.</p>
+          <p>Then I built something. I’m a lawyer, not an engineer, but I used AI-assisted workflows to build the State Stablecoin Atlas on my own, with a pipeline that flags new laws and guidance as they come out. AI sped the work up a great deal. It also invented citations, which is why every entry in the Atlas is checked against the enrolled statute and cited down to the section.</p>
+          <p>Outside work, you’ll usually find me on a hiking trail or at the gym. I also sing, and I make art whenever I find the time.</p>
+        </div>
+        <div class="shots">
+        <figure class="shot">
+          <img src="images/georgetown.jpg" width="567" height="900" decoding="async" alt="Madumita smiling in a blue floral dress in front of a Georgetown Law banner that reads Congratulations Hoya Lawyas.">
+          <figcaption>Graduation week at Georgetown Law, May 2026.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="images/singing.jpg" width="531" height="800" decoding="async" alt="Madumita singing into a microphone while seated on a stage, with a drum kit behind her.">
+          <figcaption>Singing, with a friend on guitar.</figcaption>
+        </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="work" aria-labelledby="work-title">
+    <div class="wrap">
+      <h2 class="sec-title" id="work-title">Selected work</h2>
+
+      <article class="row item">
+        <div class="meta"><b>Founder and Maintainer</b><span>Independent project</span><span>2026 – present</span></div>
+        <div class="body">
+          <h3 class="item-title">State Stablecoin Atlas</h3>
+          <p>The GENIUS Act left the states with a real role in stablecoin regulation, and the state law underneath it is a patchwork. The Atlas maps it: how each of the 50 states and DC treats money transmission and virtual currency, who regulates it, what license a business needs, and how settled the position is.</p>
+          <figure class="atlas" aria-labelledby="atlas-cap">
+            <div class="atlas-head"><b>All 51 jurisdictions</b><span>12 Oct 2026</span></div>
+            <div class="tiles" id="tiles" role="img" aria-label="51 squares, one for each state and DC: 33 live regimes, 1 pending, 5 guidance-based, 12 excluded or unsettled."></div>
+            <figcaption id="atlas-cap">
+              <span class="key"><span class="swatch sw-live" aria-hidden="true"></span>33 live regimes</span>
+              <span class="key"><span class="swatch sw-guidance" aria-hidden="true"></span>5 guidance-based</span>
+              <span class="key"><span class="swatch sw-pending" aria-hidden="true"></span>1 pending</span>
+              <span class="key"><span class="swatch sw-excluded" aria-hidden="true"></span>12 excluded or unsettled</span>
+              <span class="atlas-link">Each square is one jurisdiction. Hover for the state.</span>
+            </figcaption>
+          </figure>
+          <p class="runin"><b>Method.</b> Every entry is pinned to the bill number, the session law and the codified section, and verified against official government sources only. A monitoring pipeline checks those sources and flags changes as they happen.</p>
+          <p><a href="https://statestablecoinatlas.com" target="_blank" rel="noopener noreferrer">Visit statestablecoinatlas.com<span class="visually-hidden"> (opens in a new tab)</span></a></p>
+        </div>
+      </article>
+
+      <article class="row item">
+        <div class="meta"><b>Companion project</b><span>In progress</span><span>2026</span></div>
+        <div class="body">
+          <h3 class="item-title">Tracking how US financial regulators approach AI</h3>
+          <p>A regulator-by-regulator tracker of AI guidance, rules and enforcement from the SEC, CFTC, OCC, FinCEN, FINRA and others, including model-risk guidance and interagency statements. It uses the same primary-source standard as the Atlas.</p>
+        </div>
+      </article>
+
+      <article class="row item">
+        <div class="meta"><b>Legal Extern, Technology and Regulatory Affairs</b><span>Bluprynt, Washington, DC</span><span>Jan – Apr 2026</span></div>
+        <div class="body">
+          <h3 class="item-title">Compliance for a digital-asset company</h3>
+          <p>I wrote and maintained compliance policies and procedures, turning regulatory obligations into controls and documentation that could stand up to examination. I ran KYC and customer due diligence reviews, worked through AML and Travel Rule requirements for virtual asset service providers in Ghana, the UK, Bermuda and Brazil, and worked with product and engineering teams on the compliance side of new products.</p>
+        </div>
+      </article>
+
+      <article class="row item">
+        <div class="meta"><b>Research Assistant</b><span>Chennai, India</span><span>Jun 2022</span></div>
+        <div class="body">
+          <h3 class="item-title">A dataset of every Supreme Court of India case, 1951 to 2022</h3>
+          <p>I helped build a dataset of all Supreme Court of India cases from 1951 to 2022, to trace where and why judges began writing separate opinions. It was my first taste of turning a large body of law into something structured and searchable.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" id="education" aria-labelledby="edu-title">
+    <div class="wrap">
+      <h2 class="sec-title" id="edu-title">Education</h2>
+
+      <div class="row tight">
+        <div class="meta">Fall 2026</div>
+        <div class="body">
+          <h3 class="small-title">Ethics, Technology, and Public Policy for Practitioners</h3>
+          <p class="org">Stanford University</p>
+          <ul class="modules" aria-label="Modules">
+            <li>Algorithmic Decision-Making and Fairness</li>
+            <li>Data Collection, Privacy, and AI</li>
+            <li>Political Economy of Technology</li>
+            <li>AI, Child Safety, and Responsibility</li>
+            <li>AI and the Future of Work</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row tight">
+        <div class="meta">May 2026</div>
+        <div class="body">
+          <h3 class="small-title">LL.M., International Business and Economic Law</h3>
+          <p class="org">Georgetown University Law Center</p>
+          <p>Certificate in Securities and Financial Law. Coursework included Securities Regulation, The Essentials of FinTech Law, Innovation, Technology and International Financial Regulation, and Corporations.</p>
+        </div>
+      </div>
+      <div class="row tight">
+        <div class="meta">May 2025</div>
+        <div class="body">
+          <h3 class="small-title">B.Com., LL.B. (Hons.)</h3>
+          <p class="org">Tamil Nadu National Law University</p>
+          <p>Integrated business and law degree. Coursework included Law on Securities, International Investment Law, Banking Law, Competition Law and Intellectual Property Law.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="experience" aria-labelledby="xp-title">
+    <div class="wrap">
+      <h2 class="sec-title" id="xp-title">Experience</h2>
+
+      <div class="row tight">
+        <div class="meta">Jan – Apr 2026</div>
+        <div class="body">
+          <h3 class="small-title">Legal Extern, Technology and Regulatory Affairs</h3>
+          <p class="org">Bluprynt, Washington, DC</p>
+          <p>Compliance policies, KYC and due diligence, and AML and Travel Rule work for a digital-asset company.</p>
+        </div>
+      </div>
+      <div class="row tight">
+        <div class="meta">Dec 2024</div>
+        <div class="body">
+          <h3 class="small-title">Research Intern</h3>
+          <p class="org">Centre for Trade and Investment Laws, New Delhi</p>
+          <p>Research on free trade agreements, COP29 outcomes on climate finance under Article 6 of the Paris Agreement, and EU rules on exporting steel scrap under the Basel Convention.</p>
+        </div>
+      </div>
+      <div class="row tight">
+        <div class="meta">Oct 2024</div>
+        <div class="body">
+          <h3 class="small-title">Intern</h3>
+          <p class="org">Pathak and Associates, New Delhi</p>
+          <p>Research on competition decisions about data-sharing in the UK, EU and US, deal value thresholds, and drafting for merger filings.</p>
+        </div>
+      </div>
+      <div class="row tight">
+        <div class="meta">Aug 2024</div>
+        <div class="body">
+          <h3 class="small-title">Intern</h3>
+          <p class="org">Shardul Amarchand Mangaldas &amp; Co., Chennai</p>
+          <p>Insolvency research on amending resolution plans after creditor approval and the scope of judicial review.</p>
+        </div>
+      </div>
+      <div class="row tight">
+        <div class="meta">May – Jun 2024</div>
+        <div class="body">
+          <h3 class="small-title">Trade, Regulatory and Economic Laws Intern</h3>
+          <p class="org">Lakshmikumaran &amp; Sridharan Attorneys, Chennai</p>
+          <p>Replies to customs show cause notices on classification, countervailing duty and anti-dumping, and research on free trade agreements.</p>
+        </div>
+      </div>
+      <div class="row tight">
+        <div class="meta">Dec 2023</div>
+        <div class="body">
+          <h3 class="small-title">Intern, White-Collar Crime and Investigations</h3>
+          <p class="org">Khaitan &amp; Co, Mumbai</p>
+          <p>Drafted an anti-bribery and anti-money-laundering policy for an AI company and supported financial-crime investigations.</p>
+        </div>
+      </div>
+      <div class="row tight">
+        <div class="meta">Jun – Jul 2023</div>
+        <div class="body">
+          <h3 class="small-title">Intern</h3>
+          <p class="org">Poovayya &amp; Co., Bangalore</p>
+          <p>Research and drafting for the litigation team, mainly on civil matters.</p>
+        </div>
+      </div>
+      <div class="row tight">
+        <div class="meta">Dec 2022 – Jan 2023</div>
+        <div class="body">
+          <h3 class="small-title">Intern</h3>
+          <p class="org">Fox Mandal (Advocates and Solicitors), Chennai</p>
+          <p>Reviewed case bundles, assisted with drafting, and attended civil and family courts, tribunals and mediation centres.</p>
+        </div>
+      </div>
+      <div class="row tight">
+        <div class="meta">Jun – Jul 2022</div>
+        <div class="body">
+          <h3 class="small-title">Research Intern</h3>
+          <p class="org">Chambers of Mr. Ajay Justice Shaw</p>
+          <p>Research on criminal matters, mainly cases involving the rights of women and children.</p>
+        </div>
+      </div>
+      <div class="row tight">
+        <div class="meta">Jun 2022</div>
+        <div class="body">
+          <h3 class="small-title">Research Assistant</h3>
+          <p class="org">Supreme Court of India Dataset Project, Chennai</p>
+          <p>Helped build a dataset of every Supreme Court of India case from 1951 to 2022, tracing the origin of separate opinions.</p>
+        </div>
+      </div>
+      <div class="row tight">
+        <div class="meta">Feb 2022</div>
+        <div class="body">
+          <h3 class="small-title">Intern</h3>
+          <p class="org">Mohan and Devika Advocates, Chennai</p>
+          <p>Reviewed case bundles and researched cases across several areas of law, observing the work of the Madras High Court.</p>
+        </div>
+      </div>
+      <div class="row tight">
+        <div class="meta">Aug 2021</div>
+        <div class="body">
+          <h3 class="small-title">Intern</h3>
+          <p class="org">TNNLU Centre for Research and Writing</p>
+          <p>Compiled a guide to more than 70 Indian academic law journals, organised by subject, for the university community.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="writing" aria-labelledby="writing-title">
+    <div class="wrap">
+      <h2 class="sec-title" id="writing-title">Writing</h2>
+      <div class="row tight">
+        <div class="meta"><b>Book chapter</b><span>The LAW Learners</span><span>2023</span></div>
+        <div class="body">
+          <h3 class="post-title">The Rise of Generative AI: Copyright Issues with Special Reference to ChatGPT</h3>
+          <p class="post-desc">Chapter in <i>Global Thoughts and Opinions</i>, the Indian National Law Review’s edited book of papers published under the Hon’ble Mr. Justice Dipak Misra National Call for Chapters 2023. 1st edition, 2023. ISBN 978-81-94778-0-9.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap contact-grid">
+      <figure class="contact-photo">
+        <img src="images/hiking.jpg" width="677" height="800" decoding="async" alt="Madumita smiling in sunglasses, one foot on a rock, above a forested valley with mountains behind.">
+        <figcaption>Out on a trail.</figcaption>
+      </figure>
+      <div class="contact-body">
+        <h2 class="sec-title" id="contact-title">Get in touch</h2>
+        <p class="lead">If you work on financial regulation, digital assets or AI policy, I’d be glad to hear from you, whether about a role, the Atlas, or a question you’re working through.</p>
+        <a class="contact-email" href="mailto:mb3073@georgetown.edu">mb3073@georgetown.edu</a>
+        <div class="actions">
+          <a class="btn btn-quiet" href="https://linkedin.com/in/madumitabalaji" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>
+          <a class="btn btn-quiet" href="https://statestablecoinatlas.com" target="_blank" rel="noopener noreferrer">State Stablecoin Atlas<span class="visually-hidden"> (opens in a new tab)</span></a>
+        </div>
+        <p class="based">Based in Washington, DC.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap"><span>&copy; 2026 Madumita Mira Balaji</span><span>Washington, DC</span></div>
+</footer>
+
+<script>
+  // Status of each jurisdiction in the State Stablecoin Atlas (data/states.json, updated 12 Oct 2026).
+  (function () {
+    var groups = [
+      ['live', 'Live regime', 'NY CA TX FL CO WA AZ GA NC CT ME RI DE MD MA PA DC MN OR KY AL AK AR ID LA SD ND NE OK NM MS WV VT'],
+      ['guidance', 'Guidance-based', 'NV OH TN IA KS'],
+      ['pending', 'Pending', 'IL'],
+      ['excluded', 'Excluded or unsettled', 'WY NH NJ VA SC MI MO IN HI MT UT WI']
+    ];
+    var names = {AL:'Alabama',AK:'Alaska',AZ:'Arizona',AR:'Arkansas',CA:'California',CO:'Colorado',CT:'Connecticut',DE:'Delaware',DC:'District of Columbia',FL:'Florida',GA:'Georgia',HI:'Hawaii',ID:'Idaho',IL:'Illinois',IN:'Indiana',IA:'Iowa',KS:'Kansas',KY:'Kentucky',LA:'Louisiana',ME:'Maine',MD:'Maryland',MA:'Massachusetts',MI:'Michigan',MN:'Minnesota',MS:'Mississippi',MO:'Missouri',MT:'Montana',NE:'Nebraska',NV:'Nevada',NH:'New Hampshire',NJ:'New Jersey',NM:'New Mexico',NY:'New York',NC:'North Carolina',ND:'North Dakota',OH:'Ohio',OK:'Oklahoma',OR:'Oregon',PA:'Pennsylvania',RI:'Rhode Island',SC:'South Carolina',SD:'South Dakota',TN:'Tennessee',TX:'Texas',UT:'Utah',VT:'Vermont',VA:'Virginia',WA:'Washington',WV:'West Virginia',WI:'Wisconsin',WY:'Wyoming'};
+    var el = document.getElementById('tiles');
+    if (!el) return;
+    groups.forEach(function (g) {
+      g[2].split(' ').sort().forEach(function (code) {
+        var t = document.createElement('span');
+        t.className = 'tile ' + g[0];
+        t.textContent = code;
+        t.title = names[code] + ': ' + g[1];
+        el.appendChild(t);
+      });
+    });
+  })();
+</script>
+</body>
+</html>
